@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+   min-height: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: hsl(30, 38%, 92%);
+}
+.container {
+    display: flex;
+    justify-content: center;
+    width: 410px;
+    height: 308px;
+    background: White;
+    border-radius: 10px;
+}
+.container p {
+    font-size: 10px;
+    font-family: "Montserrat", sans-serif;
+    color: hsl(228, 12%, 48%);    
+}
+
+.image-box {
+    content: url(images/image-product-desktop.jpg);
+    border-radius: 10px 0 0 10px;
+    width: 50%;
+}
+
+.content-box {
+    width: 50%;
+    padding: 20px;  
+}
+
+.content-box h2 {
+    margin-bottom: 12px;
+    font-family: 'Fraunces';
+}
+.content-box #brand {
+    font-family: "Montserrat", sans-serif;
+    font-family: 300;
+    margin-bottom: 15px;
+}
+.content-box .price {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.price h2 {
+    color: hsl(158, 36%, 37%);
+    margin-bottom: 0;
+    margin-right: 12px;
+} 
+.content-box button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    background: hsl(158, 36%, 37%);
+    padding: 7px;
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+button img {
+    margin-right: 10px;
+}
+
+@media (max-width: 500px) {
+    .container {
+        flex-direction: column;
+        width: 245px;
+        height: 475px;
+    }
+    .image-box{
+        content: url(images/image-product-mobile.jpg);
+        width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+    .content-box{
+        width: 100%;
+    }
+}
