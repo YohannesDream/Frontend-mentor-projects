@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+body {
+    background: hsl(330, 100%, 98%);
+    display: grid;
+    place-items: center;
+    font-family: "Outfit", sans-serif;
+    padding: 125px 0;
+    
+}
+
+ul, ol {
+    margin-left: 40px;
+    padding-left: 0;  
+}
+li {
+    margin-bottom: 12px;
+    padding-left: 13px;
+}
+li::marker {
+    color: hsl(14, 45%, 36%);
+    font-weight: 700;
+}
+.container {
+    min-height: 1000px;
+    max-width: 700px;
+    background: white;
+    padding: 50px;
+    display: grid;
+    grid-gap: 25px;
+    border-radius: 25px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.young-serif {
+    font-family: "Young Serif", serif;
+}
+p, li, td{
+    color: hsl(30, 10%, 34%);
+    font-weight: 500;
+}
+.container img {
+    width: 100%;
+    border-radius: 15px;   
+}
+.pre-time {
+    background: hsla(330, 100%, 98%, 0.75);
+    padding: 22px;
+    border-radius: 15px;
+}
+.pre-time p {
+    margin-bottom: 15px;
+    color: hsl(14, 45%, 36%);
+    font-weight: 700;
+    font-size: 20px;
+}
+.ingredient,
+.instruction {
+    padding-bottom: 25px;
+    border-bottom: 1px solid hsla(30, 10%, 34%, 0.4);
+}
+ 
+.color1, li::marker{
+    color: hsl(14, 45%, 36%);
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.color1  {
+    font-size: 25px;
+}
+table .color1  {
+    font-size: 16px;
+}
+.bold-text {
+    font-weight: 700;
+}
+table {
+    width: 100%;
+    margin-top: 20px;
+}
+table, td{
+    border-collapse: collapse;
+    padding: 8px 18px;
+}
+tr{
+    border-bottom: 1px solid  hsla(30, 10%, 34%, 0.4);
+}
+#no-border {
+    border-bottom: none;
+}
+ 
