@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "karla", sans-serif;
+}
+body {
+    height: 100vh;
+    display: grid;
+    place-content: center;
+    background: hsl(204, 43%, 93%);   
+}
+main {
+    max-width: 555px;
+    height: 415px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "one one"
+    "two three";
+}
+.section {
+    display: grid;
+    color: white;
+}
+.one {
+    grid-area: one;
+    display: grid;
+    grid-gap: 12px;
+    background: white;
+    color: hsl(179, 62%, 43%);
+    line-height: 22px;
+    padding: 7% 8% 7% 6%;   
+}
+
+.one p {
+    color: hsl(218, 22%, 67%);
+    font-size: 14px;
+    font-weight: 500;
+}
+.one .header {
+    color: hsl(179, 62%, 43%);
+    font-size: 21px;
+    font-weight: bold;
+}
+.one .sub-header {
+    font-size: 15px;
+    font-weight: 700;
+    color: hsl(71, 73%, 54%);
+}
+.two {
+    grid-area: two;
+    display: grid;
+    place-content: start;
+    grid-gap: 10px;
+    flex-direction: column;
+    background: hsl(179, 62%, 43%);
+    padding: 12%;
+    font-size: 14px;
+}
+.two .price {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.two .date {
+    font-weight: 400;
+    font-size: 12px;
+    color: hsla(0, 0%, 100%, 0.5);  
+    margin-left: 12px; 
+}
+.two .dollar {
+    font-weight: 700;
+    font-size: 28px;
+}
+.two button {
+    border: none;
+    background: hsl(71, 73%, 54%);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    width: 100%;
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
+    padding: 12px 0;
+    margin-top: 12%;
+}
+.three {
+    grid-area: three;
+    background: hsla(179, 62%, 43%, 0.9);
+    padding: 14%;
+    font-size: 14px;
+}
+.three ul{
+    font-size: 14px;
+    list-style-type: none;
+    color: hsla(0, 0%, 100%, 0.5);
+    line-height: 1.2;
+    margin-top: 4%;
+}
+
+@media (max-width: 550px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        height: 800px;
+    }
+    .section {
+        width: 100%;
+        padding: 15% 5% 8% 10%; 
+        height: calc(100% / 3);
+    }
+    .one p {
+        padding-right: 15%;
+    }
+}
