@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+body {
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    background: linear-gradient(hsla(0, 100%, 74%, .7), hsla(0, 100%, 74%, .7)), url('images/bg-intro-desktop.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.container {
+    width: 84%;
+    margin: auto;
+    display: flex;
+    gap: 5%;
+    padding: 5% 0;
+}
+.text-section {
+    width: 50%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+.text-section h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+.form-section {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 15px;
+}
+.free-trial {
+    width: 100%;
+    background: hsl(248, 32%, 49%);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    padding: 10px 50px;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+}
+.form-section span {
+    color: hsla(0, 0%, 100%, .75);
+}
+form {
+    background: white;
+    padding: 8%;
+    border-radius: 15px;
+}
+.empty {
+    width: 100%;
+    color: red;
+    font-size: 12px;
+    text-align: end;
+}
+.input {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+} 
+.input-holder {
+    width: 100%;
+}
+input {
+    width: 100%;
+    padding: 10px 25px;
+    outline: none;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid;
+    font-weight: 700; 
+}
+
+::placeholder {
+    font-weight: 500;
+}
+#submit-btn {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: hsl(154, 59%, 51%);
+    border-radius: 6px;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+}
+.submit-btn:hover {
+    background: hsla(154, 59%, 51%, .75);
+}
+.form-section p {
+    font-size: 10px;
+    text-align: center;
+    color: hsl(246, 25%, 77%);
+    padding: 12px 0;
+    font-weight: 500;
+}
+.form-section a {
+    text-decoration: none;
+    color: red;
+    font-weight: 700;
+    transition: .3s;
+}
+.error-input {
+    border: 2px solid red;
+    background: url('images/icon-error.svg');
+    background-repeat: no-repeat;
+    background-position: calc(100% - 25px);
+} 
+
+@media (max-width: 700px) {
+    body {
+        background: linear-gradient(hsla(0, 100%, 74%, .7), hsla(0, 100%, 74%, .7)), url('images/bg-intro-mobile.png');
+    }
+    .container {
+        flex-direction: column;
+        width: 80%;
+        text-align: center;
+        gap: 50px;
+    }
+    .text-section {
+        width: 100%;
+    }
+    .form-section {
+        width: 100%;
+    }
+    .text-section h1 {
+        font-size: 2rem;
+    }
+}

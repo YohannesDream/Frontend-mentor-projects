@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Intro component with sign up form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <div class="text-section">
+      <h1>Learn to code by watching others</h1>
+      <p>
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+        but understanding how developers think is invaluable.
+      </p>
+    </div>
+
+    <div class="form-section">
+      <button class="free-trial">Try it free 7 days <span>then $20/mo. thereafter</span></button>
+      <form id="myForm">
+        <div class="input">
+          <div class="input-holder">
+            <input type="text" name="name" id="fname" placeholder="First Name">
+            <div id="empty-fname" class="empty"></div>
+          </div>
+          <div class="input-holder">
+            <input type="text" name="name" id="lname" placeholder="Last Name">
+            <div id="empty-lname" class="empty"></div>
+          </div>
+
+          <div class="input-holder">
+            <input type="email" name="email" id="email" placeholder="Email Address">
+            <div id="invalid-email" class="empty"></div>
+          </div>
+
+          <div class="input-holder">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <div id="empty-password" class="empty"></div>
+          </div>
+
+          <button id="submit-btn">Claim your free trial</button>
+        </div>
+          <p>By clicking the button, you are agreeing to our <a aria-label="Terms & Services" href="#">Terms and Services</a></p>
+      </form>
+    </div>
+  </main>
+<script src="script.js"></script>
+</body>
+</html>
