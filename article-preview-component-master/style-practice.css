@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Work Sans", sans-serif;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     background-color:  hsl(210, 46%, 95%);
+}
+.container {
+    max-width: 60%;
+    min-height: 300px;
+    display: flex;
+    /* overflow: hidden; */
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+    border-radius: 15px;
+    background-color: white;
+}
+.container .drawers {
+    width: 40%;
+    background: url('images/drawers.jpg');
+    background-size: cover;
+    background-position: left;
+}
+ 
+section {
+    position: relative;
+    width: 60%;
+    padding: 4%;
+}
+section p {
+    font-size: 13px;
+    color: hsl(217, 19%, 35%);
+    font-weight: 500;
+    line-height: 1.6;
+}
+section > p {
+    padding: 5% 0;
+}
+section h1 {
+    font-size: 1.4rem;
+    color: hsl(217, 19%, 35%);
+    font-weight: 700;
+    line-height: 1.4;
+}
+.profile-section {
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    
+}
+.profile-section #avatar-michelle {
+    width: 45px;
+    border-radius: 50%;
+    margin-right: 3%;
+}
+.share {
+    width: 35px;
+    height: 35px;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: hsl(210, 46%, 95%);
+    border-radius: 50%;
+    margin-left: auto;
+    cursor: pointer;
+    position: relative;
+}
+.share #icon-share {
+    width: 15px;
+    height: 15px;
+    color: blue;
+}
+.profile #name {
+    font-weight: 700;
+    color: hsl(217, 19%, 35%);  
+}
+.share-links {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 150%;
+    gap: 6%;
+    padding: 12px;
+    border-radius: 10px;
+    width: 240px;
+    background: hsl(217, 19%, 35%);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    /* visibility: hidden; */
+    /* display: none; */
+}
+.share-links p {
+    color: white;
+    font-size: 14px;
+    letter-spacing: 4px;
+    font-weight: 300;
+    color: hsl(210, 46%, 95%);
+}
+.share-links  img {
+    width: 20px;
+    height: 20px;
+}
+.share-links::after {
+    content: " ";
+    position: absolute;
+    top:  100%;
+    bottom: -50%;
+    border-width: 10px;
+    border-style: solid;
+    border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+}
+.share-links-mob {
+    display: none;
+}
+@media (max-width: 800px) {
+    .container {
+        max-width: 75%;
+    }
+    .share-links {
+        width: 200px;
+    }
+}
+@media (max-width: 550px) {
+    .container {
+        max-width: 90%;
+        /* min-height: 550px; */
+        flex-direction: column;
+        position: relative;
+        border: 1px solid red;
+    }
+
+    .container .drawers {
+        width: 100%;
+        height: 240px;
+    }
+    section {
+        width: 100%;
+        padding: 10% 8% 5%;
+        
+    }
+    section h1 {
+    font-size: 1.2rem;
+    } 
+    section p {
+    margin-bottom: 6%;
+    } 
+    .profile-section {
+        width: 100%;
+        /* padding: 8%; */
+        /* display: none; */
+    }
+    .share {
+        position: static;
+    }
+    .share-links {  
+       bottom: 0;
+       right: 0;
+    }
+    .share-links::after {
+        /* display: none; */
+    }
+    /* .share-links-mob { */
+        /* width: 100%; */
+        /* position: absolute; */
+        /* display: flex; */
+        /* align-items: center; */
+        /* padding: 5%; */
+        /* gap: 5%; */
+        /* border-radius: 0 0 15px 15px; */
+        /* justify-content: center; */
+        /* border: 1px solid; */
+        /* background: hsl(217, 19%, 35%); */
+        /* display: none; */
+        /* color: white; */
+        /* font-size: 20px; */
+        /* letter-spacing: 5px; */
+    /* } */
+    /* .share-links-mob img { */
+        /* width: 20px; */
+        /* height: 20px; */
+    /* } */
+    /* #mob-share-btn { */
+        /* width: 35px; */
+        /* height: 35px; */
+        /* position: absolute; */
+        /* left: 80%; */
+        /* bottom: -10%; */
+        /* margin-left: auto; */
+    /* border: none; */
+    /* outline: none; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* background:  red; */
+    /* border-radius: 50%; */
+    /* cursor: pointer; */
+    /* } */
+}
