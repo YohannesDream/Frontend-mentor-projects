@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Overpass", sans-serif;
+}
+ 
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: hsl(216, 12%, 8%);
+}
+ .card {
+    max-width: 390px;
+    min-height: 370px;
+    background: hsl(213, 19%, 18%);
+    color: hsl(217, 12%, 63%);
+    font-size: 15px;
+    padding: 25px;
+    border-radius: 18px;
+}
+ 
+.big-texts {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.rating-card .star {
+    background: hsla(217, 12%, 63%, .15);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 30px;
+}
+.rate-btns {
+    display: flex;
+    justify-content: space-between;
+}
+.rate-btn {
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background: hsla(217, 12%, 63%, .15);
+    color: hsl(217, 12%, 63%);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: .4s;
+    margin: 20px 0 30px;
+}
+.rate-btn:hover {
+    background:  hsl(25, 97%, 53%);
+    color: white;
+}
+.rate-btn:focus {
+    background:  hsl(217, 12%, 63%);
+    color: white;
+}
+#submit-btn {
+    width: 100%;
+    border: none;
+    border-radius: 12px;
+    background:  hsl(25, 97%, 53%);
+    padding: 8px 0;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: .4s;
+    cursor: pointer;
+}
+#submit-btn:hover {
+    background-color: white;
+    color: hsl(25, 97%, 53%);
+}
+
+.thankyou-card {
+    text-align: center;
+    display: none;
+}
+.thankyou-card #rate-status {
+    width: 180px;
+    border-radius: 12px;
+    padding: 3px 0;
+    margin: 18px auto 28px;
+    color: hsl(25, 97%, 53%);
+    background: hsla(217, 12%, 63%, .15);
+} 
+
+@media (max-width: 400px) {
+   
+    .card {
+        max-width: 90%;
+        padding: 5%;
+    }
+    .rate-btn {
+        width: 40px;
+        height: 40px;
+    }
+    .big-texts {
+        font-size: 1.5rem;
+    }
+}
