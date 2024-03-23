@@ -10,12 +10,9 @@
         errorEmail.style.display = "block";
         inputHolder.style.borderWidth = "2px";
         inputHolder.style.borderColor = "red";
-
-        /* errorMessage(email, 'Look like this is not an email');
-        email.classList.add('error-input'); */
     }
     else {
-        document.write(inputEmail.value)
+        
     }
  })
   
