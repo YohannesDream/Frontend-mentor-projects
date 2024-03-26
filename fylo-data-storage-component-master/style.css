@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+body {
+    min-height: 100vh;
+    width: 100vw;
+    background: hsl(229, 57%, 11%);
+}
+.container {
+    max-height: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    place-content: center;
+    background-image: url('images/bg-desktop.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+.inner-contianer {
+    width: 880px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+.services {
+    width: 340px;
+    padding: 35px;
+    display: grid;
+    grid-gap: 35px;
+    grid-template-columns: 1fr;
+    border-radius: 10px 110px 10px 10px;
+    background: hsl(228, 56%, 26%);
+}
+.services .service-icons {
+    display: flex;
+    gap: 8%;
+}
+.service-icons .service-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background: hsl(229, 57%, 11%);
+}
+.dashboard {
+    position: relative;
+    width: 500px;
+    padding: 35px 30px;
+    align-self: flex-end;
+    color: hsl(229, 7%, 55%);
+    border-radius: 10px;
+    background: hsl(228, 56%, 26%);
+    font-size: 14px;
+}
+.dashboard .outer {
+    width: 100%;
+    padding: 2px;
+    margin: 18px 0 10px;
+    border-radius: 10px;
+    background: hsl(229, 57%, 11%);
+}
+.outer .inner {
+    width: 82%;
+    height: 14px;
+    padding: 2px;
+    border-radius: 10px;
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+}
+.outer .inner .circle {
+     width: 10px;
+     height: 10px;
+     border-radius: 50%;
+     background: white;
+     float: right;
+     margin-right: 2px;
+}
+
+.dashboard p span {
+    font-weight: 700;
+    color: hsl(243, 100%, 93%);
+    
+}
+.left-storage {
+    position: absolute;
+    top: -30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 15px 20px;
+    border-radius: 8px 8px 0 8px;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+    
+}
+.left-storage span {
+    color: hsl(229, 57%, 11%);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-right: 10px;
+    
+}
+.dashboard .range{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.left-storage::after {
+    content: "";
+    position: absolute;
+    bottom: -35%;
+    right: 0;
+    border-width: 13px;
+    border-style: solid;
+    border-color: white white transparent transparent;
+}
+
+@media (max-width: 1000px) {
+     
+    .inner-contianer {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        background-image: url('images/bg-mobile.png');
+        background-size: cover;
+        background-position: center;
+    }
+    .inner-contianer {
+        flex-direction: column;
+        max-width: 80%;
+    }
+    .services {
+        width: 100%;
+        padding: 50px 30px;
+    }
+    .dashboard {
+        width: 100%;
+        padding: 50px 30px;
+        text-align: center;
+    }
+    .left-storage {
+        width: 60%;
+        top: 83%;
+        right: 20%;
+        left: 20%;
+        border-radius: 8px;
+        font-size: 10px;
+    }
+    .left-storage::after {
+        display: none;
+    }
+}
