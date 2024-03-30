@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    place-content: center;
+    background: hsl(210, 46%, 95%);
+}
+.contianer {
+    max-width: 84%;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.grid-item {
+    padding: 25px;
+    font-size: 11.5px;
+    font-weight: 500;
+    line-height: 1.6;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.grid-item h3 {
+    margin: 15px 0;
+    line-height: 1.2;
+    font-size: 1.0rem;
+    font-weight: 600;
+}
+.grid-item > p {
+    opacity: .7;
+}
+.daniel {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background-image: url('images/bg-pattern-quotation.svg');
+    background-repeat: no-repeat;
+    background-position: 85% 0;
+    background-color: hsl(263, 55%, 52%);
+}
+.jonathan {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    background-color: hsl(217, 19%, 35%);
+}
+.jeanette {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background-color: white;
+
+}
+.patrick {
+    grid-column: 2/4;
+    grid-row: 2/3;
+    background-color: hsl(219, 29%, 14%);
+}
+.kira {
+    grid-column: 4/5;
+    grid-row: 1/3;
+    background-color: white;
+}
+.graduate-profile {
+    width: 180px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.graduate-image {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    width: 35px;
+    border-radius: 50%;
+}
+.graduate-name {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.graduate-status {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    font-size: 11px;
+    opacity: .5;
+}
+  
+ .daniel, .jonathan, .patrick {
+    color: white;
+ }
+ 
+.patrick .graduate-image {
+    border: 2px solid hsl(263, 55%, 52%);
+}
+.daniel .graduate-image {
+    border: 2px solid hsla(0, 0%, 100%, .5);
+}
+
+@media (max-width: 1000px) {
+    .contianer {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .kira {
+        grid-column: 1/4;
+        grid-row: 3/4;
+    }
+}
+@media (max-width: 750px) {
+    .contianer {
+        grid-template-columns: 1fr 1fr;
+    }
+    .daniel {
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+    .jonathan {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    .jeanette {
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .patrick {
+        grid-column: 1/3;
+        grid-row: 4/5;
+    }
+    .kira {
+        grid-column: 1/3;
+        grid-row: 5/6;
+    }
+}
+@media (max-width: 550px) {
+
+    .contianer {
+        margin: 50px auto;
+        display: flex;
+        flex-direction: column;
+    }
+}
