@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  hsl(185, 41%, 84%);
+}
+.contianer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+}
+.calculator {
+    width: 900px;
+    display: flex;
+    gap: 28px;
+    padding: 28px;
+    border-radius: 20px;
+    background-color: white;
+
+}
+.tip-btns button:hover, #reset-btn:hover {
+    
+    background: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+}
+.tip-btns button:focus {
+    background: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+#reset-btn:focus {
+    background: hsla(172, 67%, 45%, .5);
+    color: hsl(183, 100%, 15%);
+}
+.calculator input {
+    border: none;
+    outline: none;
+    font-size: 24px;
+    color: hsl(183, 100%, 15%);
+    background: hsl(189, 41%, 97%);
+    text-align: end;
+}
+.contianer input:focus {
+    border: 2px solid hsl(172, 67%, 45%);
+    opacity: .75;
+}
+.contianer input:hover {
+    border: 2px solid hsl(172, 67%, 45%);
+    opacity: .75;
+    cursor: pointer;
+}
+::placeholder {
+    font-size: 24px;
+}
+.input-section {
+    width: 50%;
+}
+.input-box {
+    position: relative;
+}
+.input::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 60%;
+    left: 3%;
+}
+.bill::after {
+    background: url('images/icon-dollar.svg');
+    background-repeat: no-repeat;
+}
+.person::after {
+    background: url('images/icon-person.svg');
+    background-repeat: no-repeat;
+}
+#bill, #person {
+    width: 100%;
+    border-radius: 6px;
+    padding: 5px 16px;
+    margin-top: 10px;
+}
+.tip-percentage {
+    margin: 22px 0;
+}
+.tip-btns {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 10px;
+}
+.tip-btns button {
+    width: 100%;
+    height: 50px;
+    border: none;
+    font-size: 20px;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    background: hsl(183, 100%, 15%);
+    border-radius: 6px;
+    transition: .4s;
+}
+.tip-btns #custom-percentage {
+    width: 100%;
+    border-radius: 6px;
+    text-align: center;
+}
+.tip-btns #custom-percentage:focus {
+    text-align: end;
+    padding-right: 20px;
+}
+.display-section {
+    width: 50%;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: hsl(183, 100%, 15%);
+}
+.display {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin-bottom: 45px;
+}
+.display span p {
+    color: hsl(186, 14%, 43%);
+}
+.display > p {
+    font-size: 2.7rem;
+    color: hsl(172, 67%, 45%);
+}
+#reset-btn {
+    border: none;
+    outline: none;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 11px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 50px;
+    background: hsl(172, 67%, 45%);
+    transition: .4s;
+}
+#error-text {
+    float: right;
+    color: red;
+    display: none;
+}
+
+@media (max-width: 950px) {
+    .contianer {
+        width: 90%;
+    }
+    .calculator {
+        width: 100%;
+    }
+    .input-section {
+        width: 50%;  
+    }
+    .display-section {
+        width: 50%;  
+    }
+    .small-placeholder::placeholder {
+        font-size: 16px;
+    }
+      .display > p {
+        font-size: 2.4rem; 
+    }
+}
+@media (max-width: 750px) {
+    .contianer {
+        width: 90%;
+    }
+    .input-section {
+        width: 45%;  
+    }
+    .display-section {
+        width: 55%;  
+    }
+    .tip-btns {
+        grid-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .display > p {
+        font-size: 2rem;  
+    }
+    .input-box span {
+        font-size: 10px;  
+    }
+}
+@media (max-width: 600px) {
+    .contianer {
+        width: 100%;
+    }
+    .logo {
+        margin-top: 50px;
+    }
+    .calculator {
+        flex-direction: column;
+    }
+    .input-section {
+        width: 100%;  
+    }
+    .display-section {
+        width: 100%;  
+    }
+    #error-text {
+        font-size: 13px;
+    }
+    #person-label {
+        font-size: 13px;
+    }
+}

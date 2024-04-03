@@ -1,0 +1,44 @@
+<label for="total">Total Bill Amount:</label>
+<input type="number" id="total" placeholder="Enter total bill amount">
+
+<label for="persons">Number of Persons:</label>
+<input type="number" id="persons" placeholder="Enter number of persons">
+
+<button onclick="calculateTip(5)">5%</button>
+<button onclick="calculateTip(10)">10%</button>
+<button onclick="calculateTip(15)">15%</button>
+
+<label for="custom">Custom Tip Percentage:</label>
+<input type="number" id="custom" placeholder="Enter custom tip percentage">
+
+<button onclick="calculateCustomTip()">Calculate Custom Tip</button>
+<button onclick="resetForm()">Reset</button>
+
+<p>Total Tip: <span id="totalTip"></span></p>
+<p>Tip Per Person: <span id="tipPerPerson"></span></p>
+
+<script>
+function calculateTip(tipPercentage) {
+    let total = parseFloat(document.getElementById('total').value);
+    let persons = parseInt(document.getElementById('persons').value);
+    let tipAmount = total * (tipPercentage / 100);
+    let totalTip = tipAmount.toFixed(2);
+    let tipPerPerson = (tipAmount / persons).toFixed(2);
+
+    document.getElementById('totalTip').textContent = `$${totalTip}`;
+    document.getElementById('tipPerPerson').textContent = `$${tipPerPerson}`;
+}
+
+function calculateCustomTip() {
+    let customPercentage = parseFloat(document.getElementById('custom').value);
+    calculateTip(customPercentage);
+}
+
+function resetForm() {
+    document.getElementById('total').value = '';
+    document.getElementById('persons').value = '';
+    document.getElementById('custom').value = '';
+    document.getElementById('totalTip').innerHTML = "$0.00";
+    document.getElementById('tipPerPerson').innerHTML = '$0.00';
+}
+</script>
