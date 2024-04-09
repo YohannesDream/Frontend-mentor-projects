@@ -54,14 +54,16 @@ header {
     color: hsl(0, 0%, 100%);
     font-weight: 600;
     margin-left: 35px;
+    padding: 12px 18px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 25px;
     transition: .5s;
 }
 .nav-menu ul li a:hover {
     background-color: hsla(0, 0%, 100%, .25);
     text-transform: uppercase;
-    border-radius: 25px;
     font-family: "Fraunces", serif;
-    padding: 12px 18px;
+    
 }
 .menu-icon {
     display: none;
